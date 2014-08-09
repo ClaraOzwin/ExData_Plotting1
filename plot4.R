@@ -33,7 +33,7 @@ par(mfrow = c(2,2))
 plot(data$Date, data$Global_active_power, ylab="Global Active Power (kilowatts)", xlab="",type = "l") 
 
 # Generate the second plot in upper right corner showing Voltage use by datetime.
-plot(data$Date, data$Voltage, ylab="Voltage",type = "l")
+plot(data$Date, data$Voltage, xlab="datetime", ylab="Voltage",type = "l")
 
 # Generate the third plot in lower left corner showing the three energy sub metering measures.
 plot(data$Date, data$Sub_metering_1, ylab="Energy sub metering", xlab="", type="l")
@@ -46,7 +46,7 @@ lines(data$Date, data$Sub_metering_2, col="red")
 # The lty parameter gives a line symbol in the legend for each variable
 legend("topright", legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), col=c("black","red","blue"), lty=1)
 # Generate the fourth plot in lower right corner 
-plot(data$Date, data$Global_reactive_power,type = "l")  
+plot(data$Date, data$Global_reactive_power,xlab="datetime",type = "l")  
 
 # close the graphics device
 dev.off()
