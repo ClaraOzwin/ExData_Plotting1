@@ -46,7 +46,7 @@ lines(data$Date, data$Sub_metering_2, col="red")
 # The lty parameter gives a line symbol in the legend for each variable
 legend("topright", legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), col=c("black","red","blue"), lty=1)
 # Generate the fourth plot in lower right corner 
-plot(data$Date, data$Global_reactive_power,xlab="datetime",type = "l")  
+plot(data$Date, data$Global_reactive_power,xlab="datetime",ylab="Global_reactive_power",type = "l")  
 
 # close the graphics device
 dev.off()
